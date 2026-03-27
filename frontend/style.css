@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    transition: background 0.6s ease;
+}
+
+/* Background Images */
+body.daily {
+    background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb') no-repeat center/cover;
+}
+
+body.motivational {
+    background: url('https://images.unsplash.com/photo-1496307042754-b4aa456c4a2d') no-repeat center/cover;
+}
+
+body.inspirational {
+    background: url('https://images.unsplash.com/photo-1470770841072-f978cf4d019e') no-repeat center/cover;
+}
+
+body.life {
+    background: url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee') no-repeat center/cover;
+}
+
+/* Overlay */
+.container {
+    background: rgba(0,0,0,0.5);
+    min-height: 100vh;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Title */
+.title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 150px;
+    height: 100px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.2);
+    transition: 0.3s;
+}
+
+/* Hover animation */
+.card:hover {
+    transform: scale(1.1) rotate(2deg);
+    background: rgba(255,255,255,0.3);
+}
+
+/* Click animation */
+.card:active {
+    transform: scale(0.95);
+}
+
+/* Quote Box */
+.quote-box {
+    margin-top: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(10px);
+    animation: fadeIn 0.8s ease;
+}
+
+#quote {
+    transition: opacity 0.3s ease;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+/* ================= LOGIN PAGE STYLES ================= */
+
+/* Background for login page */
+body.login-bg {
+    background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e') no-repeat center/cover;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Container */
+.login-container {
+    background: rgba(0,0,0,0.6);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Glass card */
+.login-card {
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.2);
+    padding: 30px;
+    border-radius: 20px;
+    text-align: center;
+    width: 320px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease;
+}
+
+/* Inputs */
+.login-card input {
+    display: block;
+    width: 90%;
+    margin: 12px auto;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* Buttons */
+.login-card button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: #ff7eb3;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+/* Hover effect */
+.login-card button:hover {
+    transform: scale(1.05);
+}
+
+/* GitHub button */
+.github-btn {
+    background: black;
+    color: white;
+}
