@@ -7,7 +7,7 @@ function loadQuotes(type) {
     // Fade out
     quoteEl.style.opacity = 0;
 
-    fetch(`http://127.0.0.1:5000/quote/${type}`)
+    fetch(`https://quotes-app-xlxr.onrender.com/quote/${type}`)
     .then(res => res.json())
     .then(data => {
 
@@ -31,7 +31,7 @@ function login() {
 
     console.log("Sending:", user, pass); // debug
 
-    fetch("http://127.0.0.1:5000/login", {
+    fetch("https://quotes-app-xlxr.onrender.com/login", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
