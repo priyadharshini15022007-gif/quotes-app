@@ -15,12 +15,12 @@ router.post("/login", (req, res) => {
 });
 
 // GitHub login route
-router.get("/github",
+router.get("/auth/github",
     passport.authenticate("github", { scope: ["user:email"] })
 );
 
 // GitHub callback
-router.get("/github/callback",
+router.get("/auth/github/callback",
     passport.authenticate("github", {
         failureRedirect: "/login.html"
     }),
