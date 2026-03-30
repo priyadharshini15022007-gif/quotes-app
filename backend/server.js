@@ -23,7 +23,7 @@ app.use("/", quoteRoutes);
 passport.use(new GitHubStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "http://127.0.0.1:5000/auth/github/callback"
+    callbackURL: "https://quotes-app-xlxr.onrender.com/auth/github/callback"
 },
 (accessToken, refreshToken, profile, done) => {
     return done(null, profile);
@@ -32,18 +32,5 @@ passport.use(new GitHubStrategy({
 passport.serializeUser((user, done) => done(null, user));
 passport.deserializeUser((obj, done) => done(null, obj));
 
-// GitHub routes
-app.get("/auth/github",
-    passport.authenticate("github", { scope: ["user:email"] })
-);
-
-app.get("/auth/github/callback",
-    passport.authenticate("github", {
-        failureRedirect: "/"
-    }),
-    (req, res) => {
-        res.redirect("http://127.0.0.1:5500/frontend/quotes.html");
-    }
-);
 
 app.listen(5000, () => console.log("Server running"));
